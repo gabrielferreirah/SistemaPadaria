@@ -6,13 +6,17 @@ import javax.swing.JOptionPane;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-/**
+/*
  *
- * @author Alunos Carlos Augusto Borged e Gabriel de Oliveira Ferreira. 
+ *
+ * @author Alunos Carlos Augusto Borges e Gabriel de Oliveira Ferreira.
  */
 public class Cliente {
-    
-String nome = JOptionPane.showInputDialog("Digite o seu nome ");
 
-        }
+    String[] nomesClientes = new String[100];
+    String[] sobrenomesClientes = new String[100];
+    int[] idades = new int[100];
+    String[] cpfs = new String[100];
+
+    int atual = 0;
+}
