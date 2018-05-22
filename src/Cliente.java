@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 /*
  *
  *
- * @author Alunos Carlos Augusto Borges e Gabriel de Oliveira Ferreira.
+ * @author Gabriel de Oliveira Ferreira
  */
 public class Cliente {
 
@@ -27,8 +27,16 @@ public class Cliente {
     int atual = 0;
 
     public void cadastrarCliente() {
-        solicitarInformacaoCliente(atual);
+        solicitarInformacao(atual);
         atual++;
+    }
+    
+    public void listar() {
+        String texto = "";
+        for (int i = 0; i < atual; i++) {
+            texto += nomesClientes[i] + " " + sobrenomesClientes[i] + "   " + cpfsClientes[i] + "\n";
+        }
+        JOptionPane.showMessageDialog(null, texto);
     }
 
     public void buscarPeloNomeCliente() {
@@ -36,7 +44,7 @@ public class Cliente {
 
         for (int i = 0; i < atual; i++) {
             if (nomesClientes[i].contains(busca)) {
-                apresentarInformacaoCliente(i);
+                apresentarInformacao(i);
             }
         }
     }
@@ -46,14 +54,25 @@ public class Cliente {
 
         for (int i = 0; i < atual; i++) {
             if (cpfsClientes[i].equals(cpfBuscado)) {
-                apresentarInformacaoCliente(i);
+                apresentarInformacao(i);
                 return;
             }
         }
         JOptionPane.showMessageDialog(null, "CPF não encontrado");
     }
+    
+    public void editar(){
+        String busca = JOptionPane.showInputDialog("Digite o nome  para editar");
+        for (int i = 0; i < atual; i++) {
+            if (nomesClientes[i].equals(busca)) {
+                solicitarInformacao(i);
+                return;
+            }
 
-    public void apresentarInformacaoCliente(int posicao) {
+        }
+    }
+
+    public void apresentarInformacao(int posicao) {
         JOptionPane.showMessageDialog(null,
                 "Nome: " + nomesClientes[posicao] + " " + sobrenomesClientes[posicao]
                 + "\nIdade: " + idadesClientes[posicao]
@@ -67,7 +86,7 @@ public class Cliente {
         );
     }
 
-    public void solicitarInformacaoCliente(int posicao) {
+    public void solicitarInformacao(int posicao) {
         nomesClientes[posicao] = JOptionPane.showInputDialog("Digite o seu nome").trim();
         sobrenomesClientes[posicao] = JOptionPane.showInputDialog(
                 nomesClientes[posicao] + "Digite o seu sobrenome").trim();

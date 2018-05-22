@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Alunos
+ * @author Gabriel de Oliveira Ferreira
  */
 public class Produtos {
     
@@ -33,7 +33,7 @@ public class Produtos {
     public void solicitarInformacao(int posicao){
         nomes[posicao] = JOptionPane.showInputDialog("Digite o seu nome");
         valores[posicao] = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do produto"));
-        
+        alergicos[posicao] = JOptionPane.showInputDialog("Digite os componentes alergicos do produto");
     }
     
     public void apresentarInformacao(){

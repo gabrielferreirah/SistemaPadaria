@@ -12,6 +12,9 @@ import javax.swing.JOptionPane;
  */
 public class Sistema {
 
+    SistemaClientes submenuClientes = new SistemaClientes();
+    SistemaProdutos submenuProdutos = new SistemaProdutos();
+    
     public void apresentarMenuPrincipal() {
 
         int menuPrincipal = Integer.parseInt(JOptionPane.showInputDialog(null,
@@ -25,10 +28,10 @@ public class Sistema {
         while (menuPrincipal != 5) {
             switch (menuPrincipal) {
                 case 1:
-                    //implementar a entrada do menu dos clientes
+                    submenuClientes.apresentarMenuClientes();
                     break;
                 case 2:
-                    //implementar a entrada do menu dos produtos
+                    submenuProdutos.apresentarMenuProdutos();
                     break;
                 case 3:
                     //implementar a entrada do menu dos funcionarios
