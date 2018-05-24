@@ -24,7 +24,8 @@ public class Produtos {
     int atual = 0;
 
     public void buscarPeloNome() {
-        String busca = JOptionPane.showInputDialog("Digite o nome parcial para a busca");
+        String busca = JOptionPane.showInputDialog(
+                "Digite o nome parcial para a busca").trim();
 
         for (int i = 0; i < atual; i++) {
             if (nomes[i].contains(busca)) {
@@ -34,7 +35,15 @@ public class Produtos {
     }
 
     public void buscarPeloValorCalorico() {
-        //TODO implementar a busca pelo valor calorico
+        String busca = JOptionPane.showInputDialog(
+                "Digite o valor calorico do produto")
+                .trim();
+        for (int i = 0; i < atual; i++) {
+            if(valoresCaloricos[i].contains(busca)) {
+                apresentarInformacao(i);
+            }
+            
+        }
     }
 
     public void solicitarInformacao(int posicao) {
@@ -68,7 +77,8 @@ public class Produtos {
     }
 
     public void cadastrarProdutos() {
-        //TODO implenetar cadastro de produtos   
+        solicitarInformacao(atual);
+        atual++;
     }
 
     public void editar() {
