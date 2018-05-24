@@ -34,10 +34,6 @@ public class Entregas {
             }
         }
     }
-
-    public void apresentarInformacao(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-   }
    
     public void solicitarInformacao(int posicao) {
         nomes[posicao] = JOptionPane.showInputDialog(
@@ -57,17 +53,23 @@ public class Entregas {
     
     }
 
- public void apresentarInformacao(int posicao) {
+    public void apresentarInformacao(int posicao) {
         JOptionPane.showMessageDialog(null,
                 "Produto: " + nomes[posicao]
-                + "\nValor: " + valores[posicao]
-                + "\nValidade: " + validadesDosProdutos[posicao]
-                + "\nLote: " + lotes[posicao]
-                + "\nAlergicos: " + alergicos[posicao]
+                + "\nDistância: " + distanciaentrega[posicao]
+                + "\nNome dos entregadores : " + entregadores[posicao]
+                + "\nCombustível gasto : " + combustivel[posicao]
+                + "\nDisponibilidade: " + disponibilidade[posicao]
+                + "\nTempo media: " + tempomediaentregas[posicao]
+                + "\nQuantidade de entregas: " + quantidadeentregas[posicao]
+        
+        
+     );
 
+}
 }
  
  
  
- 
+
  
