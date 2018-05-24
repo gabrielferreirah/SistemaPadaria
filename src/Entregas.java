@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 public class Entregas {
     
     
-    String[] nomesClientes = new String[100];
+    String[] nomes = new String[100];
     Double[] distanciaentrega = new Double[100];
     int[] combustivel = new int[100];
     String[] entregadores = new String[100];
@@ -34,5 +34,29 @@ public class Entregas {
             }
         }
     }
+
+    public void apresentarInformacao(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+   }
+   
+    public void solicitarInformacao(int posicao) {
+        nomes[posicao] = JOptionPane.showInputDialog(
+                "Digite o seu nome:  ");
+       distanciaentrega[posicao] = Double.parseDouble(JOptionPane.showInputDialog(
+                "Digite a distância da entrega:  "));
+        entregadores[posicao] = JOptionPane.showInputDialog(
+                "Digite os nomes dos entregadores: ");
+        combustivel[posicao] = Integer.parseInt(JOptionPane.showInputDialog(
+                "Digite a quantidade de combustível gasta: "));
+        disponibilidade[posicao] = JOptionPane.showInputDialog(
+                "disponibilidade dos entregadores: ");
+        tempomediaentregas[posicao] = Double.parseDouble(JOptionPane.showInputDialog(
+                                       "Digite o tempo de medio/entrega" ));
+        quantidadeentregas[posicao] = Integer.parseInt(JOptionPane.showInputDialog(
+                                "Quantidade de entregas: "));
+    
+    
+    
+    
+    }
 }
- 
