@@ -13,7 +13,6 @@ import javax.swing.JOptionPane;
 public class SistemaClientes {
 
     Cliente registroClientes = new Cliente();
-    Sistema sistema = new Sistema();
 
     public void apresentarMenuClientes() {
         int menuClientes = Integer.parseInt(JOptionPane.showInputDialog(null,
@@ -22,11 +21,10 @@ public class SistemaClientes {
                 + "\n3 - Buscar pelo CPF"
                 + "\n4 - Listar"
                 + "\n5 - Editar"
-                + "\n6 - Voltar ao Menu Principal"
-                + "\n7 - Sair"
+                + "\n6 - Sair"
         ).trim());
 
-        while (menuClientes != 7) {
+        while (menuClientes != 6) {
             switch (menuClientes) {
                 case 1:
                     registroClientes.cadastrarCliente();
@@ -42,9 +40,6 @@ public class SistemaClientes {
                     break;
                 case 5:
                     registroClientes.editar();
-                    break;
-                case 6:
-                    sistema.apresentarMenuPrincipal();
                     break;
                 default:
                     JOptionPane.showMessageDialog(null, "Opção Invalida");
