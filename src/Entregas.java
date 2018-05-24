@@ -66,6 +66,7 @@ public class Entregas {
                 + "\nAlergicos: " + alergicos[posicao]
 
 }
+}
  
  
  
