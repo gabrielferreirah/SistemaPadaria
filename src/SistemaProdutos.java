@@ -64,13 +64,5 @@ public class SistemaProdutos {
                     + "\n6 - Sair"
             ).trim());
         }
-        
-    
-    
-    
-    
-    
-    
-    
     }
 }
