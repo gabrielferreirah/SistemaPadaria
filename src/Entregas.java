@@ -6,14 +6,12 @@ import javax.swing.JOptionPane;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Alunos Carlos Augusto Borges e Gabriel de Olivera Ferreira.
  */
 public class Entregas {
-    
-    
+
     String[] nomesClientes = new String[100];
     Double[] distanciaentrega = new Double[100];
     int[] combustivel = new int[100];
@@ -21,18 +19,22 @@ public class Entregas {
     int[] quantidadeentregas = new int[100];
     Double[] tempomediaentregas = new Double[100];
     String[] disponibilidade = new String[100];
-    
+
     int atual = 0;
-    
-       public void buscarPeloNome() {
-        
-           String busca = JOptionPane.showInputDialog("Digite o nome parcial para a busca");
-    
-           for (int i = 0; i < atual; i++) {
-            if (nomes[i].contains(busca)) {
+
+    public void buscarPeloNome() {
+
+        String busca = JOptionPane.showInputDialog("Digite o nome parcial para a busca");
+
+        for (int i = 0; i < atual; i++) {
+            if (nomesClientes[i].contains(busca)) {
                 apresentarInformacao(i);
             }
         }
     }
+    
+    public void apresentarInformacao(int posicao){
+        
+    }
+    
 }
- 

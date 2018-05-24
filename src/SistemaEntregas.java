@@ -1,3 +1,6 @@
+
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,12 +12,13 @@
  * @author Alunos Carlos Augusto Borges e Gabriel de Oliveira Ferreira.
  */
 public class SistemaEntregas {
+
     
-public void apresentarMenuEntregas){
+        public void apresentarMenuEntregas){
     
        Entregas registroEntregas = new Entregas();
-    
-     Sistema sistema = new Sistema();
+
+        Sistema sistema = new Sistema();
 
         int menuProdutos = Integer.parseInt(JOptionPane.showInputDialog(null,
                 "1 - Cadastrar"
@@ -23,9 +27,9 @@ public void apresentarMenuEntregas){
                 + "\n4 - Listar"
                 + "\n5 - Editar"
                 + "\n6 - Voltar ao Menu Principal"
-                + "\n7 - Sair" 
-                ).trim());
-        
+                + "\n7 - Sair"
+        ).trim());
+
         while (menuProdutos != 7) {
             switch (menuProdutos) {
                 case 1:
@@ -35,13 +39,13 @@ public void apresentarMenuEntregas){
                     registroEntregas.buscarPeloIngrediente();
                     break;
                 case 3:
-                     registroEntregas.buscarPeloNome();
+                    registroEntregas.buscarPeloNome();
                     break;
                 case 4:
-                     registroEntregas.listar();
+                    registroEntregas.listar();
                     break;
                 case 5:
-                     registroEntregas.editar();
+                    registroEntregas.editar();
                     break;
                 case 6:
                     sistema.apresentarMenuPrincipal();
@@ -60,4 +64,3 @@ public void apresentarMenuEntregas){
         }
     }
 }
-
