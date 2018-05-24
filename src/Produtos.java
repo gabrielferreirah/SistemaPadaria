@@ -84,10 +84,6 @@ public class Produtos {
     }
     
     public void apresentarMenuProdutos(){
-    
-        Produtos registroProdutos = new Produtos();
-    
-     Sistema sistema = new Sistema();
 
         int menuProdutos = Integer.parseInt(JOptionPane.showInputDialog(null,
                 "1 - Cadastrar"
@@ -95,29 +91,25 @@ public class Produtos {
                 + "\n3 - Buscar pelo ingredientes: "
                 + "\n4 - Listar"
                 + "\n5 - Editar"
-                + "\n6 - Voltar ao Menu Principal"
-                + "\n7 - Sair" 
+                + "\n6 - Sair" 
                 ).trim());
         
         while (menuProdutos != 7) {
             switch (menuProdutos) {
                 case 1:
-                    registroProdutos.cadastrarProdutos();
+                    cadastrarProdutos();
                     break;
                 case 2:
-                    registroProdutos.buscarPeloIngrediente();
+                    buscarPeloIngrediente();
                     break;
                 case 3:
-                     registroProdutos.buscarPeloNome();
+                    buscarPeloNome();
                     break;
                 case 4:
-                     registroProdutos.listar();
+                    listar();
                     break;
                 case 5:
-                     registroProdutos.editar();
-                    break;
-                case 6:
-                    sistema.apresentarMenuPrincipal();
+                    editar();
                     break;
                 default:
                     JOptionPane.showMessageDialog(null, "Opção Invalida, tente outra.");
