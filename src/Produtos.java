@@ -65,5 +65,8 @@ public class Produtos {
     public void buscarPeloIngrediente() {
         
     }
-
+    
+    public void listar() {
+        
+    }
 }
