@@ -1,3 +1,4 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -8,12 +9,13 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Gabriel de Oliveira Ferreira
+ * @author Gabriel de Oliveira Ferreira e Carlos Augusto Borges
  */
 public class Sistema {
 
     Cliente submenuClientes = new Cliente();
     Produtos submenuProdutos = new Produtos();
+    Entregas submenuEntregas = new Entregas();
     
     public void apresentarMenuPrincipal() {
 
