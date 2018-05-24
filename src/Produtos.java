@@ -47,7 +47,9 @@ public class Produtos {
         validadesDosProdutos[posicao] = JOptionPane.showInputDialog(
                 "Digite a validade do produto");
         lotes[posicao] = JOptionPane.showInputDialog(
-                "digite o lote do produto");
+                "Digite o lote do produto");
+        valoresCaloricos[posicao] = JOptionPane.showInputDialog(
+                "Digite o valor calorico do produto");
         
     }
 
