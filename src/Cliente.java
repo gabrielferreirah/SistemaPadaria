@@ -89,21 +89,21 @@ public class Cliente {
     public void solicitarInformacao(int posicao) {
         nomesClientes[posicao] = JOptionPane.showInputDialog("Digite o seu nome").trim();
         sobrenomesClientes[posicao] = JOptionPane.showInputDialog(
-                nomesClientes[posicao] + " " + "Digite o seu sobrenome").trim();
+                nomesClientes[posicao] + ", " + "Digite o seu sobrenome").trim();
         idadesClientes[posicao] = Integer.parseInt(JOptionPane.showInputDialog(
-                nomesClientes[posicao] + " "  + "Digite sua idade"));
+                nomesClientes[posicao] + ", "  + "Digite sua idade"));
         cpfsClientes[posicao] = JOptionPane.showInputDialog(
-                nomesClientes[posicao] + " "  + "Digite o seu CPF").trim()
+                nomesClientes[posicao] + ", "  + "Digite o seu CPF").trim()
                 .replace(".", "").replace("-", "");
         telefonesClientes[posicao] = JOptionPane.showInputDialog(
-                nomesClientes[posicao] + " "  + "Digite o seu telefone").trim();
+                nomesClientes[posicao] + ", "  + "Digite o seu telefone").trim();
         ceps[posicao] = JOptionPane.showInputDialog(
-                nomesClientes[posicao] + " "  + "Digite o seu CEP").trim()
+                nomesClientes[posicao] + ", "  + "Digite o seu CEP").trim()
                 .replace(".", "").replace("-", "");
         bairros[posicao] = JOptionPane.showInputDialog(
-                nomesClientes[posicao] + " "  + "Digite o nome seu bairro").trim();
+                nomesClientes[posicao] + ", "  + "Digite o nome seu bairro").trim();
         ruas[posicao] = JOptionPane.showInputDialog(
-                nomesClientes[posicao] + " "  + "Digite o nome da sua rua").trim();
+                nomesClientes[posicao] + ", "  + "Digite o nome da sua rua").trim();
     }
     
     public void apresentarMenuClientes() {
