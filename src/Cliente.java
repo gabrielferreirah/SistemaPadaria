@@ -12,6 +12,8 @@ import javax.swing.JOptionPane;
  * @author Gabriel de Oliveira Ferreira e Carlos Augusto Borges
  */
 public class Cliente {
+    
+    Sistema sistema = new Sistema();
 
     String[] nomesClientes = new String[100];
     String[] sobrenomesClientes = new String[100];
@@ -104,5 +106,50 @@ public class Cliente {
                 nomesClientes[posicao] + "Digite o nome seu bairro").trim();
         ruas[posicao] = JOptionPane.showInputDialog(
                 nomesClientes[posicao] + "Digite o nome da sua rua").trim();
+    }
+    
+    public void apresentarMenuClientes() {
+        int menuClientes = Integer.parseInt(JOptionPane.showInputDialog(null,
+                "1 - Cadastrar"
+                + "\n2 - Buscar pelo nome"
+                + "\n3 - Buscar pelo CPF"
+                + "\n4 - Listar"
+                + "\n5 - Editar"
+                + "\n6 - Voltar ao Menu Principal"
+                + "\n7 - Sair"
+        ).trim());
+
+        while (menuClientes != 7) {
+            switch (menuClientes) {
+                case 1:
+                    cadastrarCliente();
+                    break;
+                case 2:
+                    buscarPeloCPFCliente();
+                    break;
+                case 3:
+                    buscarPeloNomeCliente();
+                    break;
+                case 4:
+                    listar();
+                    break;
+                case 5:
+                    editar();
+                    break;
+                case 6:
+                    sistema.apresentarMenuPrincipal();
+                    break;
+                default:
+                    JOptionPane.showMessageDialog(null, "Opção Invalida");
+            }
+            menuClientes = Integer.parseInt(JOptionPane.showInputDialog(null,
+                    "1 - Cadastrar"
+                    + "\n2 - Buscar pelo nome"
+                    + "\n3 - Buscar pelo CPF"
+                    + "\n4 - Listar"
+                    + "\n5 - Editar"
+                    + "\n6 - Sair"
+            ).trim());
+        }
     }
 }

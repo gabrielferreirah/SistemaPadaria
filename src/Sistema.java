@@ -12,8 +12,8 @@ import javax.swing.JOptionPane;
  */
 public class Sistema {
 
-    SistemaClientes submenuClientes = new SistemaClientes();
-    SistemaProdutos submenuProdutos = new SistemaProdutos();
+    Cliente submenuClientes = new Cliente();
+    Produtos submenuProdutos = new Produtos();
     
     public void apresentarMenuPrincipal() {
 
