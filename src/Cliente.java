@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 /*
  *
  *
- * @author Gabriel de Oliveira Ferreira
+ * @author Gabriel de Oliveira Ferreira e Carlos Augusto Borges.
  */
 public class Cliente {
 
