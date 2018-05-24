@@ -38,10 +38,10 @@ public class SistemaProdutos {
                     registroProdutos.cadastrarProdutos();
                     break;
                 case 2:
-                    registroProdutos.buscarPeloingrediente();
+                    registroProdutos.buscarPeloIngrediente();
                     break;
                 case 3:
-                     registroProdutos.buscarPeloNomeCliente();
+                     registroProdutos.buscarPeloNome();
                     break;
                 case 4:
                      registroProdutos.listar();
