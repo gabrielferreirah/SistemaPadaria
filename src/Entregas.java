@@ -67,60 +67,78 @@ public class Entregas {
      );
 
 }
+
+    public void apresentarReceita() {
+        //TODO apresentar a receita
+    }
+
+    public void cadastrarProdutos() {
+        //TODO implenetar cadastro de produtos   
+    }
+
+    public void editar() {
+        //TODO implementar edição das informacões
+    }
+    
+    public void buscarPeloIngrediente() {
+        //TODO implementar busca por ingrediente específico
+    }
+    
+    public void listar() {
+        //TODO implementar listagem para o produto
+    }
+    
+    public void apresentarMenuProdutos(){
+    
+        Produtos registroProdutos = new Produtos();
+    
+     Sistema sistema = new Sistema();
+
+        int menuProdutos = Integer.parseInt(JOptionPane.showInputDialog(null,
+                "1 - Cadastrar"
+                + "\n2 - Buscar pelo nome: "
+                + "\n3 - Buscar pelo ingredientes: "
+                + "\n4 - Listar"
+                + "\n5 - Editar"
+                + "\n6 - Voltar ao Menu Principal"
+                + "\n7 - Sair" 
+                ).trim());
+        
+        while (menuProdutos != 7) {
+            switch (menuProdutos) {
+                case 1:
+                    registroProdutos.cadastrarProdutos();
+                    break;
+                case 2:
+                    registroProdutos.buscarPeloIngrediente();
+                    break;
+                case 3:
+                     registroProdutos.buscarPeloNome();
+                    break;
+                case 4:
+                     registroProdutos.listar();
+                    break;
+                case 5:
+                     registroProdutos.editar();
+                    break;
+                case 6:
+                    sistema.apresentarMenuPrincipal();
+                    break;
+                default:
+                    JOptionPane.showMessageDialog(null, "Opção Invalida, tente outra.");
+            }
+            menuProdutos = Integer.parseInt(JOptionPane.showInputDialog(null,
+                    "1 - Cadastrar"
+                    + "\n2 - Buscar pelo nome"
+                    + "\n3 - Buscar pelo CPF"
+                    + "\n4 - Listar"
+                    + "\n5 - Editar"
+                    + "\n6 - Sair"
+            ).trim());
+        }
+    }
 }
+
  
  
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  
