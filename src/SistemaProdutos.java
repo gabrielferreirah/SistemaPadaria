@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Gabriel de Oliveira Ferreira e Carlos Augusto Borges
+ * @author Gabriel de Oliveira Ferreira e Carlos Augusto Borges.
  */
 public class SistemaProdutos {
     
@@ -58,7 +58,7 @@ public class SistemaProdutos {
             menuProdutos = Integer.parseInt(JOptionPane.showInputDialog(null,
                     "1 - Cadastrar"
                     + "\n2 - Buscar pelo nome"
-                    + "\n3 - Buscar pelo CPF"
+                    + "\n3 - Buscar pelo ingrediente"
                     + "\n4 - Listar"
                     + "\n5 - Editar"
                     + "\n6 - Sair"
