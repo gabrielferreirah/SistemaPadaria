@@ -16,6 +16,7 @@ public class Sistema {
     Cliente submenuClientes = new Cliente();
     Produtos submenuProdutos = new Produtos();
     Entregas submenuEntregas = new Entregas();
+    Funcionarios submenuFuncionaios = new Funcionarios();
     
     public void apresentarMenuPrincipal() {
 
@@ -36,7 +37,7 @@ public class Sistema {
                     submenuProdutos.apresentarMenuProdutos();
                     break;
                 case 3:
-                    //implementar a entrada do menu dos funcionarios
+                    submenuFuncionaios.apresentarMenuFuncionarios();
                     break;
                 case 4:
                     submenuEntregas.apresentarMenuEntregas();
