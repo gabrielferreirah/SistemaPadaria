@@ -40,7 +40,7 @@ public class Produtos {
 
     public void solicitarInformacao(int posicao) {
         nomes[posicao] = JOptionPane.showInputDialog(
-                "Digite o seu nome");
+                "Digite o nome do produto");
         valores[posicao] = Double.parseDouble(JOptionPane.showInputDialog(
                 "Digite o valor do produto"));
         alergicos[posicao] = JOptionPane.showInputDialog(
@@ -50,7 +50,7 @@ public class Produtos {
         lotes[posicao] = JOptionPane.showInputDialog(
                 "Digite o lote do produto");
         valoresCaloricos[posicao] = JOptionPane.showInputDialog(
-                "Digite o valor calorico do produto");
+                "Digite o valor calórico do produto");
 
     }
 
@@ -60,7 +60,7 @@ public class Produtos {
                 + "\nValor: " + valores[posicao]
                 + "\nValidade: " + validadesDosProdutos[posicao]
                 + "\nLote: " + lotes[posicao]
-                + "\nAlergicos: " + alergicos[posicao]
+                + "\nAlérgicos: " + alergicos[posicao]
         );
     }
 
