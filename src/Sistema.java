@@ -33,7 +33,7 @@ public class Sistema {
                     submenuClientes.apresentarMenuClientes();
                     break;
                 case 1:
-                    submenuProdutos.apresentarMenuProdutos();
+                    submenuProdutos.gerirMenu();
                     break;
                 case 2:
                     submenuFuncionaios.apresentarMenuFuncionarios();
