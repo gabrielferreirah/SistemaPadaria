@@ -4,7 +4,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 import javax.swing.JOptionPane;
 
 /**
@@ -13,45 +12,44 @@ import javax.swing.JOptionPane;
  */
 public class Sistema {
 
-    Cliente submenuClientes = new Cliente();
-    Produtos submenuProdutos = new Produtos();
-    Entregas submenuEntregas = new Entregas();
-    Funcionarios submenuFuncionaios = new Funcionarios();
-    
-    public void apresentarMenuPrincipal() {
+    private Cliente submenuClientes = new Cliente();
+    private Produtos submenuProdutos = new Produtos();
+    private Entregas submenuEntregas = new Entregas();
+    private Funcionarios submenuFuncionaios = new Funcionarios();
 
-        int menuPrincipal = Integer.parseInt(JOptionPane.showInputDialog(null,
-                "1 - Cliente"
-                + "\n2 - Produtos"
-                + "\n3 - Funcionário"
-                + "\n4 - Entregas"
-                + "\n5 - Sair"
-        ));
+    private int apresentarMenuPrincipal() {
 
-        while (menuPrincipal != 5) {
-            switch (menuPrincipal) {
-                case 1:
+        int menuPrincipal = JOptionPane.showOptionDialog(null,
+                "MENU PRINCIPAL",
+                "Padaria",
+                0,
+                0,
+                null,
+                new Object[]{
+                    "Cliente", "Produtos", "Funcionários", "Entregas","Sair"
+                }, "Cliente"
+        );
+        return menuPrincipal;
+    }
+
+    public void gerirMenu() {
+        int menu = apresentarMenuPrincipal();
+        while (menu != 4) {
+            switch (menu) {
+                case 0:
                     submenuClientes.apresentarMenuClientes();
                     break;
-                case 2:
+                case 1:
                     submenuProdutos.apresentarMenuProdutos();
                     break;
-                case 3:
+                case 2:
                     submenuFuncionaios.apresentarMenuFuncionarios();
                     break;
-                case 4:
+                case 3:
                     submenuEntregas.apresentarMenuEntregas();
                     break;
-                default:
-                    JOptionPane.showMessageDialog(null, "Opção Invalida");
             }
-            menuPrincipal = Integer.parseInt(JOptionPane.showInputDialog(null,
-                    "1 - Cliente"
-                + "\n2 - Produtos"
-                + "\n3 - Funcionário"
-                + "\n4 - Entregas"
-                + "\n5 - Sair"
-                    ));
+            menu = apresentarMenuPrincipal();
         }
     }
 }
