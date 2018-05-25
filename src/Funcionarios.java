@@ -114,10 +114,10 @@ public class Funcionarios {
                     cadastrarFuncionario();
                     break;
                 case 2:
-                    buscarPeloCPFFuncionario();
+                    buscarPeloNomeDoFuncionario();
                     break;
                 case 3:
-                    buscarPeloNomeDoFuncionario();
+                    buscarPeloCPFFuncionario();
                     break;
                 case 4:
                     listarFuncionarios();
