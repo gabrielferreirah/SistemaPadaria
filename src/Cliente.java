@@ -34,6 +34,9 @@ public class Cliente {
         for (int i = 0; i < atual; i++) {
             texto += nomesClientes[i] + " " + sobrenomesClientes[i] + "   " + cpfsClientes[i] + "\n";
         }
+        if (texto.equals("")) {
+            texto += "Não há nenhum cliente informado.";
+        }
         JOptionPane.showMessageDialog(null, texto);
     }
 
@@ -56,11 +59,11 @@ public class Cliente {
                 return;
             }
         }
-        JOptionPane.showMessageDialog(null, "CPF não encontrado");
+        JOptionPane.showMessageDialog(null, "CPF não encontrado!");
     }
 
     public void editar() {
-        String busca = JOptionPane.showInputDialog("Digite o nome  para editar");
+        String busca = JOptionPane.showInputDialog("Digite o nome para editar");
         for (int i = 0; i < atual; i++) {
             if (nomesClientes[i].equals(busca)) {
                 solicitarInformacao(i);
@@ -130,7 +133,7 @@ public class Cliente {
                     editar();
                     break;
                 default:
-                    JOptionPane.showMessageDialog(null, "Opção Invalida");
+                    JOptionPane.showMessageDialog(null, "Opção Inválida!");
             }
             menuClientes = Integer.parseInt(JOptionPane.showInputDialog(null,
                     "1 - Cadastrar"
