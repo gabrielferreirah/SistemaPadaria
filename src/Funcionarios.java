@@ -46,6 +46,9 @@ public class Funcionarios {
         for (int i = 0; i < atual; i++) {
             texto += nomesFuncionarios[i] + " " + sobrenomesFuncionarios[i] + "   " + cpfsFuncionarios[i] + "\n";
         }
+        if (texto.equals("")) {
+            texto += "Não há nenhum funcionário informado.";
+        }
         JOptionPane.showMessageDialog(null, texto);
     }
     
