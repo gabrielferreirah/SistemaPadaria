@@ -39,7 +39,7 @@ public class Sistema {
                     //implementar a entrada do menu dos funcionarios
                     break;
                 case 4:
-                    //implementar a entrada do menu de entregas
+                    submenuEntregas.apresentarMenuEntregas();
                     break;
                 default:
                     JOptionPane.showMessageDialog(null, "Opção Invalida");
