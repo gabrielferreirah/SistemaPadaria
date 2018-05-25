@@ -13,8 +13,6 @@ import javax.swing.JOptionPane;
 public class Produtos {
 
     String[] nomes = new String[100];
-    String[] ingredientes = new String[100];
-    String[] receitas = new String[100];
     double[] valores = new double[100];
     String[] validadesDosProdutos = new String[100];
     double[] lucros = new double[100];
@@ -39,10 +37,10 @@ public class Produtos {
                 "Digite o valor calorico do produto")
                 .trim();
         for (int i = 0; i < atual; i++) {
-            if(valoresCaloricos[i].contains(busca)) {
+            if (valoresCaloricos[i].contains(busca)) {
                 apresentarInformacao(i);
             }
-            
+
         }
     }
 
@@ -59,7 +57,7 @@ public class Produtos {
                 "Digite o lote do produto");
         valoresCaloricos[posicao] = JOptionPane.showInputDialog(
                 "Digite o valor calorico do produto");
-        
+
     }
 
     public void apresentarInformacao(int posicao) {
@@ -72,10 +70,6 @@ public class Produtos {
         );
     }
 
-    public void apresentarReceita() {
-        //TODO apresentar a receita
-    }
-
     public void cadastrarProdutos() {
         solicitarInformacao(atual);
         atual++;
@@ -84,36 +78,36 @@ public class Produtos {
     public void editar() {
         //TODO implementar edição das informacões
     }
-    
+
     public void buscarPeloIngrediente() {
         //TODO implementar busca por ingrediente específico
     }
-    
+
     public void listar() {
         //TODO implementar listagem para o produto
     }
-    
-    public void apresentarMenuProdutos(){
+
+    public void apresentarMenuProdutos() {
 
         int menuProdutos = Integer.parseInt(JOptionPane.showInputDialog(null,
                 "1 - Cadastrar"
                 + "\n2 - Buscar pelo nome: "
-                + "\n3 - Buscar pelo ingredientes: "
+                + "\n3 - Buscar pelo Valor Calorico: "
                 + "\n4 - Listar"
                 + "\n5 - Editar"
-                + "\n6 - Sair" 
-                ).trim());
-        
-        while (menuProdutos != 7) {
+                + "\n6 - Sair"
+        ).trim());
+
+        while (menuProdutos != 6) {
             switch (menuProdutos) {
                 case 1:
                     cadastrarProdutos();
                     break;
                 case 2:
-                    buscarPeloIngrediente();
+                    buscarPeloNome();
                     break;
                 case 3:
-                    buscarPeloNome();
+                    buscarPeloValorCalorico();
                     break;
                 case 4:
                     listar();
@@ -122,12 +116,13 @@ public class Produtos {
                     editar();
                     break;
                 default:
-                    JOptionPane.showMessageDialog(null, "Opção Invalida, tente outra.");
+                    JOptionPane.showMessageDialog(null,
+                            "Opção Invalida, tente outra.");
             }
             menuProdutos = Integer.parseInt(JOptionPane.showInputDialog(null,
                     "1 - Cadastrar"
-                    + "\n2 - Buscar pelo nome"
-                    + "\n3 - Buscar pelo CPF"
+                    + "\n2 - Buscar pelo nome: "
+                    + "\n3 - Buscar pelo Valor Calorico: "
                     + "\n4 - Listar"
                     + "\n5 - Editar"
                     + "\n6 - Sair"

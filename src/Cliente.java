@@ -21,8 +21,6 @@ public class Cliente {
     String[] ruas = new String[100];
     String[] bairros = new String[100];
     String[] ceps = new String[100];
-    int[] pedidosPorMes = new int[100];
-    String[] cartaoFidelidade = new String[100];
 
     int atual = 0;
 
@@ -30,7 +28,7 @@ public class Cliente {
         solicitarInformacao(atual);
         atual++;
     }
-    
+
     public void listar() {
         String texto = "";
         for (int i = 0; i < atual; i++) {
@@ -60,8 +58,8 @@ public class Cliente {
         }
         JOptionPane.showMessageDialog(null, "CPF não encontrado");
     }
-    
-    public void editar(){
+
+    public void editar() {
         String busca = JOptionPane.showInputDialog("Digite o nome  para editar");
         for (int i = 0; i < atual; i++) {
             if (nomesClientes[i].equals(busca)) {
@@ -81,8 +79,6 @@ public class Cliente {
                 + "\nCEP: " + ceps[posicao]
                 + "\nBairro: " + bairros[posicao]
                 + "\nRua: " + ruas[posicao]
-                + "\nCartao Fidelidade: " + cartaoFidelidade[posicao]
-                + "\nQuantidade de pedidos nesse mês" + pedidosPorMes[posicao]
         );
     }
 
@@ -91,21 +87,21 @@ public class Cliente {
         sobrenomesClientes[posicao] = JOptionPane.showInputDialog(
                 nomesClientes[posicao] + ", " + "Digite o seu sobrenome").trim();
         idadesClientes[posicao] = Integer.parseInt(JOptionPane.showInputDialog(
-                nomesClientes[posicao] + ", "  + "Digite sua idade"));
+                nomesClientes[posicao] + ", " + "Digite sua idade"));
         cpfsClientes[posicao] = JOptionPane.showInputDialog(
-                nomesClientes[posicao] + ", "  + "Digite o seu CPF").trim()
+                nomesClientes[posicao] + ", " + "Digite o seu CPF").trim()
                 .replace(".", "").replace("-", "");
         telefonesClientes[posicao] = JOptionPane.showInputDialog(
-                nomesClientes[posicao] + ", "  + "Digite o seu telefone").trim();
+                nomesClientes[posicao] + ", " + "Digite o seu telefone").trim();
         ceps[posicao] = JOptionPane.showInputDialog(
-                nomesClientes[posicao] + ", "  + "Digite o seu CEP").trim()
+                nomesClientes[posicao] + ", " + "Digite o seu CEP").trim()
                 .replace(".", "").replace("-", "");
         bairros[posicao] = JOptionPane.showInputDialog(
-                nomesClientes[posicao] + ", "  + "Digite o nome seu bairro").trim();
+                nomesClientes[posicao] + ", " + "Digite o nome seu bairro").trim();
         ruas[posicao] = JOptionPane.showInputDialog(
-                nomesClientes[posicao] + ", "  + "Digite o nome da sua rua").trim();
+                nomesClientes[posicao] + ", " + "Digite o nome da sua rua").trim();
     }
-    
+
     public void apresentarMenuClientes() {
         int menuClientes = Integer.parseInt(JOptionPane.showInputDialog(null,
                 "1 - Cadastrar"
@@ -122,10 +118,10 @@ public class Cliente {
                     cadastrarCliente();
                     break;
                 case 2:
-                    buscarPeloCPFCliente();
+                    buscarPeloNomeCliente();
                     break;
                 case 3:
-                    buscarPeloNomeCliente();
+                    buscarPeloCPFCliente();
                     break;
                 case 4:
                     listar();

@@ -1,11 +1,4 @@
-
 import javax.swing.JOptionPane;
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
  *
@@ -67,67 +60,47 @@ public class Entregas {
      );
 
 }
-
-    public void apresentarReceita() {
-        //TODO apresentar a receita
-    }
-
-    public void cadastrarProdutos() {
-        //TODO implenetar cadastro de produtos   
-    }
-
     public void editar() {
         //TODO implementar edição das informacões
     }
-    
-    public void buscarPeloIngrediente() {
-        //TODO implementar busca por ingrediente específico
-    }
-    
+        
     public void listar() {
         //TODO implementar listagem para o produto
     }
     
-    public void apresentarMenuProdutos(){
+    public void apresentarMenuEntregas(){
     
-        Produtos registroProdutos = new Produtos();
-    
-     Sistema sistema = new Sistema();
-
-        int menuProdutos = Integer.parseInt(JOptionPane.showInputDialog(null,
-                "1 - Cadastrar"
+        int menuEntregas = Integer.parseInt(JOptionPane.showInputDialog(null,
+                "1 - Cadastrar Entrega"
                 + "\n2 - Buscar pelo nome: "
                 + "\n3 - Buscar pelo ingredientes: "
                 + "\n4 - Listar"
                 + "\n5 - Editar"
-                + "\n6 - Voltar ao Menu Principal"
-                + "\n7 - Sair" 
+                + "\n6 - Sair" 
                 ).trim());
         
-        while (menuProdutos != 7) {
-            switch (menuProdutos) {
+        while (menuEntregas != 6) {
+            switch (menuEntregas) {
                 case 1:
-                    registroProdutos.cadastrarProdutos();
+                    
                     break;
                 case 2:
-                    registroProdutos.buscarPeloIngrediente();
+                    
                     break;
                 case 3:
-                     registroProdutos.buscarPeloNome();
+                    buscarPeloNome();
                     break;
                 case 4:
-                     registroProdutos.listar();
+                    listar();
                     break;
                 case 5:
-                     registroProdutos.editar();
-                    break;
-                case 6:
-                    sistema.apresentarMenuPrincipal();
+                    editar();
                     break;
                 default:
-                    JOptionPane.showMessageDialog(null, "Opção Invalida, tente outra.");
+                    JOptionPane.showMessageDialog(null,
+                            "Opção Invalida, tente outra.");
             }
-            menuProdutos = Integer.parseInt(JOptionPane.showInputDialog(null,
+            menuEntregas = Integer.parseInt(JOptionPane.showInputDialog(null,
                     "1 - Cadastrar"
                     + "\n2 - Buscar pelo nome"
                     + "\n3 - Buscar pelo CPF"
