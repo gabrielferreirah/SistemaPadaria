@@ -34,7 +34,7 @@ public class Funcionarios {
             ("Informe o telefone do funcionário"));
         salariosFuncionarios[atual] = Double.parseDouble(JOptionPane.showInputDialog
             ("Informe o salário do funcionário")
-                .replaceAll("R$", "").replaceAll(",", "."));
+                .replace("R", "").replace("$", "").replace(",", "."));
         cargoPertenceFuncionarios[atual] = JOptionPane.showInputDialog("Informe o cargo do funcionário");
         horarioDeTrabalhoFuncionarios[atual] = JOptionPane.showInputDialog
             ("Informe o horário de trabalho do funcionário");
