@@ -70,7 +70,14 @@ public class Produtos {
     }
 
     public void editar() {
-      
+        String busca = JOptionPane.showInputDialog("Digite o nome do produto para editar");
+        for (int i = 0; i < atual; i++) {
+            if (nomes[i].equals(busca)) {
+                solicitarInformacao(i);
+                return;
+            }
+
+        }
     }
     
 
