@@ -70,12 +70,24 @@ public class Produtos {
     }
 
     public void editar() {
-        //TODO implementar edição das informacões
+      
     }
+    
 
     public void listar() {
-        //TODO implementar listagem para o produto
+    String texto = "";
+        for (int i = 0; i < atual; i++) {
+            texto += nomes[i] + "  " + validadesDosProdutos[i] + "   "  + valores[i] + "   " + lucros[i] + 
+                    valoresCaloricos[i] + "   " +  alergicos[i] + "   " + lotes[i] + "\n";
+        }
+        if (texto.equals("")) {
+            texto += "Não há nenhum produto encontrado. ";
+        }
+        JOptionPane.showMessageDialog(null, texto);
     }
+    
+
+    
 
     private int apresentarMenuProdutos() {
         int menuProdutos = JOptionPane.showOptionDialog(null,
