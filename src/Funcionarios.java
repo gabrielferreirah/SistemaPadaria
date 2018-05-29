@@ -64,7 +64,8 @@ public class Funcionarios {
     }
     
     public void buscarPeloCPFFuncionario() {
-        String cpfBuscado = JOptionPane.showInputDialog("Digite o CPF que deseja buscar");
+        String cpfBuscado = JOptionPane.showInputDialog("Digite o CPF que deseja buscar")
+                .replace(".", "").replace("-","");
 
         for (int i = 0; i < atual; i++) {
             if (cpfsFuncionarios[i].equals(cpfBuscado)) {
