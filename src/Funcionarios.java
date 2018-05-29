@@ -43,7 +43,7 @@ public class Funcionarios {
     public void listarFuncionarios() {
         String texto = "";
         for (int i = 0; i < atual; i++) {
-            texto += nomesFuncionarios[i] + " " + sobrenomesFuncionarios[i] + "   " + cpfsFuncionarios[i] + "\n";
+            texto += nomesFuncionarios[i] + " " + sobrenomesFuncionarios[i] + "\nCPF: " + cpfsFuncionarios[i] + "\n";
         }
         if (texto.equals("")) {
             texto += "Não há nenhum funcionário informado.";
@@ -90,7 +90,7 @@ public class Funcionarios {
                 + "\nIdade: " + idadesFuncionarios[posicao]
                 + "\nCPF: " + cpfsFuncionarios[posicao]
                 + "\nTelefone: " + telefonesFuncionarios[posicao]
-                + "\nSalário: " + salariosFuncionarios[posicao]
+                + "\nSalário: R$" + salariosFuncionarios[posicao]
                 + "\nCargo: " + cargoPertenceFuncionarios[posicao]
                 + "\nHorário de trabalho: " + horarioDeTrabalhoFuncionarios[posicao]
                 
