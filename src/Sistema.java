@@ -1,3 +1,4 @@
+
 import javax.swing.JOptionPane;
 
 /**
@@ -19,7 +20,7 @@ public class Sistema {
                 0,
                 null,
                 new Object[]{
-                    "Cliente", "Produtos", "Funcionários", "Entregas","Sair"
+                    "Cliente", "Produtos", "Funcionários","Sair"
                 }, "Cliente"
         );
         return menuPrincipal;
@@ -27,7 +28,7 @@ public class Sistema {
 
     public void gerirMenu() {
         int menu = apresentarMenuPrincipal();
-        while (menu != 4) {
+        while (menu != 3) {
             switch (menu) {
                 case 0:
                     submenuClientes.apresentarMenuClientes();

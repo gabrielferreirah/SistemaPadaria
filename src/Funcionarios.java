@@ -57,8 +57,10 @@ public class Funcionarios {
         for (int i = 0; i < atual; i++) {
             if (nomesFuncionarios[i].contains(busca)) {
                 apresentarInformacao(i);
+                return;
             }
         }
+        JOptionPane.showMessageDialog(null, "Nome não encontrado!");
     }
     
     public void buscarPeloCPFFuncionario() {
@@ -80,8 +82,8 @@ public class Funcionarios {
                 solicitarInformacoes(i);
                 return;
             }
-
         }
+        JOptionPane.showMessageDialog(null, "Nenhum funcionário encontrado!");
     }
     
     public void apresentarInformacao(int posicao) {

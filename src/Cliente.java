@@ -26,7 +26,7 @@ public class Cliente {
     public void listar() {
         String texto = "";
         for (int i = 0; i < atual; i++) {
-            texto += nomesClientes[i] + " " + sobrenomesClientes[i] + "   " + cpfsClientes[i] + "\n";
+            texto += nomesClientes[i] + " " + sobrenomesClientes[i] + "\nCPF: " + cpfsClientes[i] + "\n";
         }
         if (texto.equals("")) {
             texto += "Não há nenhum cliente informado.";
@@ -40,12 +40,14 @@ public class Cliente {
         for (int i = 0; i < atual; i++) {
             if (nomesClientes[i].contains(busca)) {
                 apresentarInformacao(i);
+                return;
             }
         }
+        JOptionPane.showMessageDialog(null, "Nome não encontrado!");
     }
 
     public void buscarPeloCPFCliente() {
-        String cpfBuscado = JOptionPane.showInputDialog("Digite o CPF que deseja buscar");
+        String cpfBuscado = JOptionPane.showInputDialog("Digite o CPF que deseja buscar").replace(".", "").replace("-", "");
 
         for (int i = 0; i < atual; i++) {
             if (cpfsClientes[i].equals(cpfBuscado)) {
@@ -63,15 +65,15 @@ public class Cliente {
                 solicitarInformacao(i);
                 return;
             }
-
         }
+        JOptionPane.showMessageDialog(null, "Nenhum cliente encontrado!");
     }
 
     public void apresentarInformacao(int posicao) {
         JOptionPane.showMessageDialog(null,
                 "Nome: " + nomesClientes[posicao] + " " + sobrenomesClientes[posicao]
                 + "\nIdade: " + idadesClientes[posicao]
-                + "\nCpf: " + cpfsClientes[posicao]
+                + "\nCPF: " + cpfsClientes[posicao]
                 + "\nTelefone: " + telefonesClientes[posicao]
                 + "\nCEP: " + ceps[posicao]
                 + "\nBairro: " + bairros[posicao]

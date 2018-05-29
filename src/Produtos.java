@@ -22,8 +22,10 @@ public class Produtos {
         for (int i = 0; i < atual; i++) {
             if (nomes[i].contains(busca)) {
                 apresentarInformacao(i);
+                return;
             }
         }
+        JOptionPane.showMessageDialog(null, "Nome não encontrado!");
     }
 
     public void buscarPeloValorCalorico() {
@@ -33,9 +35,10 @@ public class Produtos {
         for (int i = 0; i < atual; i++) {
             if (valoresCaloricos[i].contains(busca)) {
                 apresentarInformacao(i);
+                return;
             }
-
         }
+        JOptionPane.showMessageDialog(null, "Valor não encontrado!");
     }
 
     public void solicitarInformacao(int posicao) {
@@ -75,11 +78,10 @@ public class Produtos {
                 solicitarInformacao(i);
                 return;
             }
-
         }
+        JOptionPane.showMessageDialog(null, "Nenhum produto encontrado!");
     }
     
-
     public void listar() {
     String texto = "";
         for (int i = 0; i < atual; i++) {
@@ -91,9 +93,6 @@ public class Produtos {
         JOptionPane.showMessageDialog(null, texto);
     }
     
-
-    
-
     private int apresentarMenuProdutos() {
         int menuProdutos = JOptionPane.showOptionDialog(null,
                 "MENU DE PRODUTOS",
