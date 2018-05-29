@@ -51,7 +51,6 @@ public class Produtos {
                 "Digite o lote do produto");
         valoresCaloricos[posicao] = JOptionPane.showInputDialog(
                 "Digite o valor calórico do produto");
-
     }
 
     public void apresentarInformacao(int posicao) {
