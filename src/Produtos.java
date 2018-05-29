@@ -84,7 +84,7 @@ public class Produtos {
     public void listar() {
     String texto = "";
         for (int i = 0; i < atual; i++) {
-            texto += nomes[i] + "/nValidade: " + validadesDosProdutos[i] + "\nPreço: R$" + valores[i] + "\nLote: " + lotes[i] + "\n";
+            texto += nomes[i] + "\nValidade: " + validadesDosProdutos[i] + "\nPreço: R$" + valores[i] + "\nLote: " + lotes[i] + "\n";
         }
         if (texto.equals("")) {
             texto += "Não há nenhum produto encontrado. ";
