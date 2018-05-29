@@ -52,7 +52,7 @@ public class Funcionarios {
     }
     
     public void buscarPeloNomeDoFuncionario() {
-        String busca = JOptionPane.showInputDialog("Digite o nome parcial para a busca");
+        String busca = JOptionPane.showInputDialog("Digite o primeiro nome para a busca");
 
         for (int i = 0; i < atual; i++) {
             if (nomesFuncionarios[i].contains(busca)) {
