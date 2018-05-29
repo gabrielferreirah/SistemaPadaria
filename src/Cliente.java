@@ -96,7 +96,7 @@ public class Cliente {
                 nomesClientes[posicao] + ", " + "Digite o seu CEP").trim()
                 .replace(".", "").replace("-", "");
         bairros[posicao] = JOptionPane.showInputDialog(
-                nomesClientes[posicao] + ", " + "Digite o nome seu bairro").trim();
+                nomesClientes[posicao] + ", " + "Digite o nome do seu bairro").trim();
         ruas[posicao] = JOptionPane.showInputDialog(
                 nomesClientes[posicao] + ", " + "Digite o nome da sua rua").trim();
     }
