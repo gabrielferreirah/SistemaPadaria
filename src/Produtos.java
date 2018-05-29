@@ -42,7 +42,7 @@ public class Produtos {
         nomes[posicao] = JOptionPane.showInputDialog(
                 "Digite o nome do produto");
         valores[posicao] = Double.parseDouble(JOptionPane.showInputDialog(
-                "Digite o valor do produto"));
+                "Digite o valor do produto").replace("R", "").replace("$", "").replace(",", ".").trim());
         alergicos[posicao] = JOptionPane.showInputDialog(
                 "Digite os componentes alergicos do produto");
         validadesDosProdutos[posicao] = JOptionPane.showInputDialog(
@@ -57,7 +57,7 @@ public class Produtos {
     public void apresentarInformacao(int posicao) {
         JOptionPane.showMessageDialog(null,
                 "Produto: " + nomes[posicao]
-                + "\nValor: " + valores[posicao]
+                + "\nValor: R$" + valores[posicao]
                 + "\nValidade: " + validadesDosProdutos[posicao]
                 + "\nLote: " + lotes[posicao]
                 + "\nAlérgicos: " + alergicos[posicao]
@@ -84,7 +84,7 @@ public class Produtos {
     public void listar() {
     String texto = "";
         for (int i = 0; i < atual; i++) {
-            texto += nomes[i] + "  " + validadesDosProdutos[i] + "   "  + valores[i] + "   " + lotes[i] + "\n";
+            texto += nomes[i] + "/nValidade: " + validadesDosProdutos[i] + "\nPreço: R$" + valores[i] + "\nLote: " + lotes[i] + "\n";
         }
         if (texto.equals("")) {
             texto += "Não há nenhum produto encontrado. ";
